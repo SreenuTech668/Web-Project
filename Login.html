@@ -1,0 +1,128 @@
+<!Doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<title>Login</title>
+<link rel="icon" type="image" href="https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-11-23/a760d750-2d74-11eb-9dcd-8b2ef5358591.jpg">
+<style>
+body{
+background-image:url('https://th.bing.com/th/id/OIP.gTuhLMIfHUT6ncjkWMv8jgHaF1?w=1000&h=787&rs=1&pid=ImgDetMain');
+background-size:cover;
+backdrop-filter:blur(10px);
+}
+.container{
+position:relative;
+width:350px;
+}
+h1{
+background-color:black;
+color:white;
+margin-top:-1px;
+}
+.container input{
+            width: 60%;
+            padding: 10px 35px;
+            margin-left:40px;
+            border: 2px solid white;
+            border-radius: 5px;
+}
+.container .icon{
+position:absolute;
+left:48px;
+top:50%;
+transform:translateY(-50%);
+color:black;
+margin-top:8px;
+}
+img{
+padding:2px;
+margin:3px;
+width:120px;
+height:120px;
+border-radius:50%;
+border:2px solid black;
+box-shadow:0px 0px 180px 4px skyblue; 
+border-top-color:red;
+opacity:0.5;
+}
+table{
+border:2px solid black;
+border-radius:5px;
+background-image:url('https://static.vecteezy.com/system/resources/previews/028/241/446/non_2x/screen-technology-background-use-the-login-to-access-the-system-it-is-a-illustration-designed-to-look-modern-and-hi-tech-suitable-for-work-related-to-technology-vector.jpg');
+background-size:cover;
+maargin-right:10px;
+border-top-color:white;
+}
+a{
+text-decoration:none;
+color:white;
+}
+button{
+width:80px;
+height:40px;
+border-radius:8px;
+background-color:green;
+border:2px solid gold;
+color:gold;
+}
+legend{
+font-weight:600;
+font-family:arial;
+margin-left:40px;
+margin-top:8px;
+color:white;
+}
+.rotete {
+width:40px;
+height:40px;
+background-color:white;
+border-radius:50%;
+box-shadow:0px 0px 12px 4px black;
+ border:1px solid red;
+animation-name:rotate;
+animation-duration:9s;
+animation-iteration-count:infinite;
+}
+@keyframes rotate{
+0%{
+transform:rotate(0deg);
+}
+100%{
+transform:rotate(360deg);
+}
+}
+i{
+margin-top:12px;
+}
+</style>
+</head>
+<body><br><br><br><br>
+<form method="post" action="login.php">
+<center><table>
+<tr>
+<td>
+<center><h1>LOGIN</h1></center>
+<center><img src="https://th.bing.com/th/id/OIP.Z9MPb-mr_Soaz3u-MgNjPQHaHa?w=192&h=192&c=7&r=0&o=5&dpr=1.5&pid=1.7"></center>
+<center><div class="rotete">
+<i class="fa-solid fa-gear"></li>
+</div></center>
+<div class="container">
+<legend>E-MAIL</legend>
+<i class="fa fa-envelope icon"></i>
+<input type="email" placeholder="Enter your email" name="E-MAIL" required>
+</div><br>
+<div class="container">
+<legend>PASSWORD</legend>
+<i class="fa fa-lock icon"></i>
+<input type="password" placeholder="Enter your password" name="PASSWORD" required>
+</div><br><br>
+</td>
+</tr>
+</table></center><br>
+<div class="login">
+<center><p>Don't have account ? <a href="C:/SAMPLE/Sign%20up.html"><u>REGISTER</u></a></p></center>
+</div><br>
+<center><button>LOGIN</button></center>
+</form>
+</body>
+</html>

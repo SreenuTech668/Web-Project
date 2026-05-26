@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Box</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" type="image" href="https://th.bing.com/th/id/OIP.TANrLromeeJSHARyNc2WbwAAAA?w=150&h=150&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+   
+    <style>
+     body{
+     background-image:url('https://th.bing.com/th/id/OIP.2YimeGH3HA5WO2dcr8s1AQHaEK?w=305&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3');
+     color:black;
+      background-repeat:no-repeat;
+      background-size: cover;
+     }
+     .Complaint{
+        border:2px solid black;
+        width: 380px;
+        height:auto;
+background-image: url('https://th.bing.com/th/id/OIP.jNjWy4qN8k_4yzrqODpSdQHaEK?w=298&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3');
+background-repeat: no-repeat;
+background-size: cover;
+border-radius: 15px;
+     }
+     img{
+        border-radius:50%;
+        border:2px solid black;
+     }
+     input{
+        width:230px;
+        height:24px;
+        border-radius:20px;
+        border:1px solid red;
+     }
+     label{
+        color:white;
+     }
+     select{
+        padding:5px;
+        margin:2px;
+        background-color: black;
+        color:white;
+     }
+     textarea{
+        width:240px;
+        height:25px;
+     }
+     textarea:hover{
+        background-color:black;
+        color:white;
+        border:0.5px solid red;
+     }
+     input:hover{
+        background-color:black;
+        color:white;
+     }
+     button{
+        background-color:black;
+        color:white;
+        width:110px;
+        height:30px;
+        border:1px solid white;
+     }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+            alert('Submitted successfully');
+                $('div').css('background-color','red'.slideup(10000));
+            });
+        });
+    </script>
+</head>
+<body>
+<form method="POST" action="complaint.php">
+    <center><div class="Complaint"><br><br>
+        <img src="https://th.bing.com/th/id/OIP.TANrLromeeJSHARyNc2WbwAAAA?w=150&h=150&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"><br><br>
+        <input type="text" placeholder="Enter your name" name="Name" required><br><br>
+        <input type="text" placeholder="Enter your Number" name="Number" required><br><br>
+        <input type="email" placeholder="Enter your Number" name="Email" required><br><br>
+        <label><b>CATEGORY</b></label>
+        <select name="Select">
+            <option>----Select-----</option>
+            <option>Food</option>
+            <option>Class</option>
+            <option>Lectures</option>
+            <option>Hod's</option>
+            <option>Staff</option>
+        </select><br><br>
+        <label><b>Wrote the below: </b></label><br><br>
+        <textarea placeholder="Describe the complaint here" name="textarea"></textarea>
+    </div><br>
+    <button>SUBMIT</button>
+    </form>
+    </center>
+</body>
+</html>

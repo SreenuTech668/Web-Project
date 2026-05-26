@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login/Signup Slide UI</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url('https://wallpaperaccess.com/full/4893798.jpg');
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            width: 300px;
+            overflow: hidden;
+            border: 2px solid #000;
+            border-radius: 8px;
+            background-image:url('https://static.vecteezy.com/system/resources/thumbnails/011/635/825/small/abstract-square-interface-modern-background-concept-fingerprint-digital-scanning-visual-security-system-authentication-login-vector.jpg');
+            background-repeat:no-repeat;
+            background-size:cover;
+            backgrpound-position:center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+h2{
+color:white;
+}
+
+        .form-wrapper {
+            width: 600px;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .form {
+            width: 300px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        input {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+color:white;
+        }
+
+        .form p button {
+            background: none;
+            border: none;
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .form p button:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body >
+<form method="POST" action="login_signup.php">
+    <div class="form-container">
+        <div class="form-wrapper">
+            <div class="form login-form">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button>Login</button>
+                <p>Don't have an account? <button class="show-signup">Signup</button></p>
+            </div>
+
+            <div class="form signup-form">
+                <h2>Signup</h2>
+                <input type="text" placeholder="Username" name="Username" required>
+                <input type="email" placeholder="Email" neme="Email" required>
+                <input type="password" placeholder="Password" name="Password" required>
+                <input type="password" placeholder="Re-Enter Password" name="Password" required>
+                <button>Register</button>
+                <p>Already have an account? <button class="show-login">Login</button></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.show-signup').click(function() {
+                $('.form-wrapper').css('transform', 'translateX(-300px)');
+            });
+
+            $('.show-login').click(function() {
+                $('.form-wrapper').css('transform', 'translateX(0)');
+            });
+        });
+    </script>
+</form>
+</body>
+</html>

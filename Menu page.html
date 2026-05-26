@@ -1,0 +1,318 @@
+<!Doctype html>
+<html>
+<head>
+<title>Menu Page</title>
+<link rel="icon" type="image" href="https://image.shutterstock.com/image-illustration/restaurant-menu-title-fullsize-raster-260nw-1111374311.jpg">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+body{
+background-image:url('https://static.vecteezy.com/system/resources/previews/022/575/502/non_2x/large-beautiful-drops-of-transparent-rain-water-on-a-green-leaf-macro-drops-of-dew-in-the-morning-glow-in-the-sun-beautiful-leaf-texture-in-nature-natural-background-generative-ai-photo.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+justify-content:center;
+}
+.sidebar{
+    position:fixed;
+            top:100px;
+            right:18px;
+            height:500px;
+            width:200px;
+            z-index:999;
+            display:none;
+            background-color:black;
+       flex-direction:column;
+border-radius:12px;
+text-align:left;
+}
+.Sidebar:hover{
+color:black;
+}
+svg{
+display:none;
+color:white;
+margin-top:-15px;
+}
+@media(max-width:800px){
+.hideOnMobile{
+display:none;
+}
+}
+@media(max-width:800px){
+svg{
+display:block;
+}
+}
+h1{
+color:black;
+margin-top:-10px;
+border-bottom:4px solid black;
+}
+.nav{
+background-color:black;
+color:white;
+margin-top:-60px;
+}
+ul{
+width:100%;
+height:110px;
+background-color:purple;
+text-align:right;
+margin-right:1px;
+margin-top:-22px;
+border-bottom:5px solid yellow;
+}
+li{
+display:inline-block;
+text-decoration:none;
+margin-right:40px;
+margin-top:46px;
+space-between:20px;
+}
+.logo{
+width:60px;
+height:50px;
+float:left;
+}
+.logo-img{
+ width:85px;
+height:85px;
+margin-top:-40px;
+border-radius:70%;
+border:2px solid black;
+}
+a{
+text-decoration:none;
+color:white;
+font-size:20px;
+margin-left:20px;
+}
+ a:hover{
+border-bottom:2px solid yellow;
+}
+.position{
+border-bottom:2px solid yellow;
+}
+        h2{
+            color: aliceblue;
+        }
+        p{
+            color: red;
+text-align:center;
+margin:20px;
+margin-top:30px;
+margin-left:270px;
+font-weight:bold;
+font-size:25px;
+ }
+@media(max-width:576px){
+p{
+width:auto;
+margin-left:40px;
+}
+}
+@media(max-width:576px){
+input{
+width:200px;
+height:200px;
+}
+}
+@media(max-width:576px){
+button{
+display:block;
+}
+}
+        .grid{
+            padding: 2em;
+            border: 1px solid black;
+            border-radius: 10px;
+            display:flex;
+            background-color:skyblue;
+            margin:5px;
+        }
+@media(max-width:576px){
+.grid{
+display:block;
+} 
+}
+
+        .responsive{
+            flex-wrap: wrap;
+             display: grid;
+             margin-left:20px;
+             grid-template-columns: repeat(1,1fr);
+             z-index:-1;
+        }
+.items{
+padding:0;
+margin:0;
+width:120px;
+height:100px;
+border-radius:8px;
+}
+@media(max-width:576px){
+.items{
+margin-left:90px;
+width:200px;
+height:200px;
+}
+}
+button{
+width:150px;
+height:40px;
+margin-left:170px;
+background-color:green;
+margin-top:25px;
+font-size:20px;
+text-align:center;
+border-radius:8px;
+text-align:center;
+}
+button:hover{
+border:2px solid #51E2F5;
+box-shadow:1px 0px 6px 5px #66FF99;
+color:gold;
+}
+@media(max-width:576px){
+button{
+background-color:black;
+color:white;
+margin-left:120px;
+padding:0px;
+text-align:center;
+}
+button:hover{
+color:red;
+}
+}
+#btn-1{
+border-bottom:0px solid white;
+margin-left:120px;
+}
+#btn-2{
+border-bottom:0px;
+margin-left:15px;
+}
+#btn-3{
+border-bottom:0px;
+margin-left:-30px;
+}
+#btn-4{
+border-bottom:0px;
+margin-left:-10px;
+}
+#btn-5{
+border-bottom:0px;
+margin-left:40px;
+}
+#btn-6{
+border-bottom:0px;
+margin-left:100px;
+}
+#btn-7{
+border-bottom:0px;
+margin-left:-10px;
+}
+#btn-8{
+border-bottom:0px;
+margin-left:90px;
+}
+.header{
+width:100%;
+background-image:url('https://wallpaperbat.com/img/497234-hamburger-wallpaper-hamburger-wallpaper-wallpaper-hamburger-meat-and-hamburger-background.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+height:400px;
+}
+span{
+font-size:20px;
+diaplay:flex;
+margin-top:400px;
+}
+.burger{
+width:100%;
+height:350px;
+position:relative;
+right:0;
+left:0;
+z-index:-1;
+}
+</style>
+</head>
+<body><br><br>
+<navbar class="nav">
+ <ul class="sidebar">
+<center><li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="white" background-fill="green"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li></center><br>
+<li class="Sidebar"><a href="Restaurent%20Site.html"><b><i class="fa-solid fa-house"></i>&nbsp;HOME</b></a></li>
+<li class="Sidebar"><a href="About%20us.html"><b><i class="fa-regular fa-address-card"></i>&nbsp;ABOUT US</a></li>
+<li class="Sidebar"><a href="Menu%20page.html" class="position"><i class="fa-solid fa-bars"></i>&nbsp;MENU</a></li>
+<li class="Sidebar"><a href="#"><i class="fas fa-shopping-cart"></i>&nbsp;ORDERS</a></li>
+<li class="Sidebar"><a href="Contact.html"><i class="fa-solid fa-address-card"></i>&nbsp;CONTACT</a></li>
+</ul>
+<ul>
+<li class="logo"><img src="https://bing.com/th?q=Restaurant+and+Bar+Symbol&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" class="logo-img"></li>
+<li class="hideOnMobile"><a href="Restaurent%20Site.html"><b><i class="fa-solid fa-house"></i>&nbsp;HOME</b></a></li>
+<li class="hideOnMobile"><a href="About%20us.html"><b><i class="fa-regular fa-address-card"></i>&nbsp;ABOUT US</a></li>
+<li class="hideOnMobile"><a href="#" class="position"><i class="fa-solid fa-bars"></i>&nbsp;MENU</a></li>
+<li class="hideOnMobile"><a href="#"><i class="fas fa-shopping-cart"></i>&nbsp;ORDERS</a></li>
+<li class="hideOnMobile"><a href="Contact.html"><i class="fa-solid fa-address-card"></i>&nbsp;CONTACT</a></li>
+<li onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+</ul>
+</navbar>
+<center><h1>MENU</h1></center>
+<br>
+    <div class="responsive">
+       <div class="grid">
+       <img src="https://www.bing.com/th/id/OIP.dWeoReQmPQPkIHZFmYpXiQHaFj?w=268&h=211&c=8&rs=1&qlt=90&o=6&cb=ircwebpc2&dpr=1.5&pid=3.1&rm=2" class="items">
+<p>PURI</p>
+<a href="Contact.html" id="btn-1"><button><b>Order Now <i class="fa-solid fa-arrow-right"></i></b></button></a>
+       </div>
+       <div class="grid">
+   <img src="https://www.cookwithkushi.com/wp-content/uploads/2016/10/rumali_roti_roomali_roti_recipe.jpg" class="items">
+<p>RUMALI ROTI</p>
+<a href="Contact.html" id="btn-2"><button><b>Order Now <i class="fa-solid fa-arrow-right"></i></b></button></a>
+       </div>
+       <div class="grid">
+           <img src="https://tse2.mm.bing.net/th/id/OIP.xXf-M8Rrfp_rfG3bo4qRbgHaFD?cb=thvnextc2&rs=1&pid=ImgDetMain&o=7&rm=3" class="items">
+<p>CHICKEN BIRYANI</p>
+<a href="Contact.html" id="btn-3"><button><b>Order Now <i class="fa-solid fa-arrow-right"></i></b></button></a>
+       </div>
+       <div class="grid">
+           <img src="https://th.bing.com/th/id/OSK.daad380bc293d52dfd458fe8d521819b?w=164&h=164&rs=2&qlt=80&o=6&cdv=1&cb=ircwebpc2&dpr=1.5&pid=16.1" class="items">
+<p>CHICKEN CURRY</p>
+<a href="Contact.html" id="btn-4"><button><b>Order Now <i class="fa-solid fa-arrow-right"></i></b></button></a>
+       </div>
+       <div class="grid">
+           <img src="https://th.bing.com/th/id/OSK.e2188cb918c6da5bc7d175ac750be7e2?w=184&h=278&rs=2&qlt=80&o=6&cdv=1&cb=ircwebpc2&dpr=1.5&pid=16.1" class="items">
+<p>VEG BIRYANI</p>
+<a href="Contact.html" id="btn-5"><button><b>Order Now <i class="fa-solid fa-arrow-right"></i></b></button></a>
+       </div>
+       <div class="grid">
+           <img src="https://ts2.mm.bing.net/th?id=OIP.vx70VKi7PCRJASgkNMpYhwHaHa&pid=15.1" class="items">
+<p>FISH FRY</p>
+<a href="Contact.html" id="btn-6"><button ><b>Order Now <i class="fa-solid fa-arrow-right"></i></b></button></a>
+       </div>
+       <div class="grid">
+           <img src="https://bing.com/th/id/OIP.bbWA8P-ntNMmwfahiRbHOwHaLG?w=202&h=369&c=7&r=0&o=7&cb=thvnextc2&dpr=1.5&pid=1.7&rm=3" class="items">
+<p>BUTTER CHICKEN</p>
+<a href="Contact.html" id="btn-7"><button><b>Order Now <i class="fa-solid fa-arrow-right"></i></b></button></a>
+       </div>
+       <div class="grid">
+          <img src="https://bing.com/th/id/OIP.Wq6-iMPjuj3s2esX6IIdWgHaE8?w=282&h=189&c=7&r=0&o=7&cb=thvnextc2&dpr=1.5&pid=1.7&rm=3" class="items">
+<p>CHAPATHI</p>
+<a href="Contact.html" id="btn-8"><button><b>Order Now <i class="fa-solid fa-arrow-right"></i></b></button></a>
+       </div>
+    </div>
+<script>
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+    }
+function hideSidebar(){
+ const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
+</script>
+</body>
+</html>

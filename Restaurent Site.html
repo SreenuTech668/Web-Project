@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image" href="https://th.bing.com/th/id/OIP.S814C6q9O4NcPfKrQrOtYQHaH5?o=7rm=3&rs=1&pid=ImgDetMain">
+  <style>
+    body {
+      background-image: url('https://th.bing.com/th/id/OIP.xOY2Nsmb0S3NaE1mFhCHCwHaEK?o=7rm=3&rs=1&pid=ImgDetMain');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 170px;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 98%;
+      z-index: 999;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      right: 18px;
+      height: 500px;
+      width: 200px;
+      z-index: 999;
+      display: none;
+      background-color: black;
+      flex-direction: column;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    svg {
+      display: none;
+      color: white;
+      margin-left: 50px;
+      margin-top: -15px;
+    }
+
+    @media(max-width:800px) {
+      .hideOnMobile {
+        display: none;
+      }
+      svg {
+        display: block;
+      }
+    }
+
+    h1 {
+      background-color: white;
+      color: black;
+      margin-top: -10px;
+      border-bottom: 4px solid black;
+    }
+
+    .nav {
+      background-color: black;
+      color: white;
+      margin-top: -60px;
+    }
+
+    ul {
+      width: 96%;
+      height: 110px;
+      background-color: purple;
+      text-align: right;
+      margin-right: 1px;
+      margin-top: -22px;
+      border-bottom: 5px solid yellow;
+    }
+
+    li {
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 55px;
+      margin-top: 46px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 50px;
+      float: left;
+    }
+
+    .logo-img {
+      width: 85px;
+      height: 85px;
+      margin-top: -40px;
+      border-radius: 70%;
+      border: 2px solid black;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+
+    .active,
+    a:hover {
+      border-bottom: 2px solid yellow;
+    }
+
+    .menu-form {
+      width: 99.2%;
+      height: 390px;
+      border: 2px solid black;
+    }
+
+    .contact-form {
+      border: 1.5px solid black;
+      background-color: #c26b59;
+      height: 350px;
+      width: 99%;
+      margin-right: 250px;
+    }
+
+    .facebook a,
+    .instagram a,
+    .whatsapp a,
+    .twitter a,
+    .mobile a,
+    .mail a {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 50%;
+      font-size: 30px;
+      color: white;
+    }
+
+    .facebook a {
+      background-color: blue;
+    }
+
+    .facebook a:hover {
+      background-color: white;
+      color: blue;
+    }
+
+    .instagram a {
+      background: linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    }
+
+    .instagram a:hover {
+      background: black;
+    }
+
+    .whatsapp a {
+      background-color: green;
+    }
+
+    .whatsapp a:hover {
+      background-color: white;
+      color: green;
+    }
+
+    .twitter a {
+      background-color: #15202B;
+    }
+
+    .twitter a:hover {
+      background-color: white;
+      color: #15202B;
+    }
+
+    .mobile a {
+      background-color: black;
+    }
+
+    .mobile a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .mail a {
+      background-color: #15202B;
+    }
+
+    .mail a:hover {
+      background-color: white;
+      color: #15202B;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    button {
+      margin-top: 1em;
+      margin:10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color:blue;
+      border-radius:10px;
+      font-family:arial;
+      font-weight:600;
+    }
+button:hover{
+background-color:green;
+color:black;
+}
+  </style>
+</head>
+<body onload="showWelcome()">
+
+  <center><h1>Restaurant Site</h1></center>
+
+ 
+  <navbar class="nav">
+    <ul class="sidebar">
+      <center><li onclick="hideSidebar()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </li></center><br>
+      <li><a href="Restaurent%20Site.html" class="active"><i class="fa-solid fa-house"></i>&nbsp;HOME</a></li>
+      <li><a href="About%20us.html"><i class="fa-regular fa-address-card"></i>&nbsp;ABOUT US</a></li>
+      <li><a href="Menu%20page.html"><i class="fa-solid fa-bars"></i>&nbsp;MENU</a></li>
+      <li><a href="#"><i class="fas fa-shopping-cart"></i>&nbsp;ORDERS</a></li>
+      <li><a href="Contact.html"><i class="fa-solid fa-address-card"></i>&nbsp;CONTACT</a></li>
+    </ul>
+
+    <ul>
+      <li class="logo"><img src="https://th.bing.com/th/id/OIP.jxqZoj2X7H271J8Dz1ilTwHaFm?w=1600&h=1210&rs=1&pid=ImgDetMain" class="logo-img"></li>
+      <li class="hideOnMobile"><a href="Restaurent%20Site.html" class="active"><i class="fa-solid fa-house"></i>&nbsp;HOME</a></li>
+      <li class="hideOnMobile"><a href="About%20us.html"><i class="fa-regular fa-address-card"></i>&nbsp;ABOUT US</a></li>
+      <li class="hideOnMobile"><a href="Menu%20page.html"><i class="fa-solid fa-bars"></i>&nbsp;MENU</a></li>
+      <li class="hideOnMobile"><a href="#"><i class="fas fa-shopping-cart"></i>&nbsp;ORDERS</a></li>
+      <li class="hideOnMobile"><a href="Contact.html"><i class="fa-solid fa-address-card"></i>&nbsp;CONTACT</a></li>
+      <li onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+    </ul>
+  </navbar>
+
+ 
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-content">
+      <h2>Welcome</h2>
+      <p>Please log in or register</p>
+      <button onclick="handleAuth('login')">Login</button>
+      <button onclick="handleAuth('register')">Register</button>
+    </div>
+  </div>
+
+ 
+  <section class="menu-form">
+    <!-- Content can go here -->
+  </section>
+
+  <center>
+    <section class="contact-form"><br><br><br>
+      <div class="social-icons">
+        <li class="facebook"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li class="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li class="whatsapp"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li class="twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <li class="mobile"><a href="#"><i class="fa-solid fa-mobile"></i></a></li>
+        <li class="mail"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+      </div>
+    </section>
+  </center>
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'flex';
+    }
+
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'none';
+    }
+
+    function handleAuth(action) {
+      document.getElementById("authModal").style.display = "none";
+      if (action === 'login') {
+        window.location.href = 'Login.html';
+      } else if (action === 'register') {
+        window.location.href = 'Sign%20up.html';
+      }
+    }
+
+    function showWelcome() {
+      alert("Welcome to the Restaurant ✋!");
+    }
+  </script>
+</body>
+</html>

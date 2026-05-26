@@ -1,0 +1,182 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="icon" type="image" href="https://img.freepik.com/free-vector/forms-concept-illustration_114360-4797.jpg?ga=GA1.1.1410297787.1729706640&semt=ais_hybrid&w=740">
+<style>
+body{
+background-image:url('https://img.freepik.com/free-photo/contact-us-customer-support-hotline-people-connect-call-customer-support_36325-2023.jpg?size=626&ext=jpg');
+background-repeat:no-repeat;
+background-size:cover;
+}
+.nav{
+background-color:black;
+color:white;
+margin-top:-60px;
+}
+.sidebar{
+    position:fixed;
+            top:100px;
+            right:18px;
+            height:500px;
+            width:200px;
+            z-index:999;
+            display:none;
+            background-color:black;
+       flex-direction:column;
+border-radius:12px;
+text-align:left;
+}
+.Sidebar:hover{
+color:black;
+}
+svg{
+display:none;
+color:white;
+margin-left:50px;
+margin-top:-15px;
+}
+@media(max-width:800px){
+.hideOnMobile{
+display:none;
+}
+}
+@media(max-width:800px){
+svg{
+display:block;
+}
+}
+ul{
+width:98%;
+height:110px;
+background-color:purple;
+text-align:right;
+margin-right:1px;
+margin-top:-22px;
+border-bottom:5px solid yellow;
+}
+li{
+display:inline-block;
+text-decoration:none;
+margin-right:55px;
+margin-top:46px;
+space-between:20px;
+}
+a{
+text-decoration:none;
+color:white;
+font-size:20px;
+}
+.active,a:hover{
+border-bottom:2px solid yellow;
+}
+.logo{
+width:60px;
+height:50px;
+float:left;
+}
+.logo-img{
+ width:85px;
+height:85px;
+margin-top:-40px;
+border-radius:70%;
+border:2px solid black;
+}
+h1{
+font-family:arial;
+color:white;
+margin-top:-1px;
+}
+h2{
+ Font-family:arial;
+}
+td{
+margin:15px;
+padding:10px;
+}
+table{
+border:3px solid black;
+background-image:url("https://blog.shift4shop.com/hs-fs/hubfs/contact%20information.jpg?width=1800&name=contact%20information.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+border-radius:6px;
+box-shadow:0px 1px 20px 8px white;
+}
+input{
+width:210px;
+height:25px;
+border:1.5px solid black;
+border-radius:10px;
+font-weight:600;
+}
+img{
+width:420px;
+height:120px;
+}
+button{
+width:75px;
+height:30px;
+border-radius:8px;
+border:2px solid yellow;
+background-color:purple;
+color:white;
+}
+</style>
+</head>
+<body>
+<br>
+<navbar class="nav">
+ <ul class="sidebar">
+<center><li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="white" background-fill="green"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li></center><br>
+<li class="Sidebar"><a href="Restaurent%20Site.html" ><b><i class="fa-solid fa-house"></i>&nbsp;HOME</b></a></li>
+<li class="Sidebar"><a href="About%20us.html"><b><i class="fa-regular fa-address-card"></i>&nbsp;ABOUT US</a></li>
+<li class="Sidebar"><a href="#"><i class="fa-solid fa-bars"></i>&nbsp;MENU</a></li>
+<li class="Sidebar"><a href="#"><i class="fas fa-shopping-cart"></i>&nbsp;ORDERS</a></li>
+<li class="Sidebar"><a href="Contact.html"><i class="fa-solid fa-address-card"></i>&nbsp;CONTACT</a></li>
+</ul>
+<ul>
+<li class="logo"><img src="https://th.bing.com/th/id/OIP.jxqZoj2X7H271J8Dz1ilTwHaFm?w=1600&h=1210&rs=1&pid=ImgDetMain" class="logo-img"></li>
+<li class="hideOnMobile"><a href="Restaurent%20Site.html" ><b><i class="fa-solid fa-house"></i>&nbsp;HOME</b></a></li>
+<li class="hideOnMobile"><a href="About%20us.html"><b><i class="fa-regular fa-address-card"></i>&nbsp;ABOUT US</a></li>
+<li class="hideOnMobile"><a href="Menu%20page.html"><i class="fa-solid fa-bars"></i>&nbsp;MENU</a></li>
+<li class="hideOnMobile"><a href="#"><i class="fas fa-shopping-cart"></i>&nbsp;ORDERS</a></li>
+<li class="hideOnMobile"><a href="Contact.html" class="active"><i class="fa-solid fa-address-card"></i>&nbsp;CONTACT</a></li>
+<li onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+</ul>
+</navbar>
+<br><br> 
+<center><table>
+<tr>
+<td><b><h2><u>Contact Details</u></h2></b></td>
+</tr>
+<tr>
+<td><label><b>Name</b></label></td>
+<td><input type="text" placeholder="Enter your Name" name="FName" required ></td>
+</tr>
+<tr>
+<td><label><b>Number</b></label></td>
+<td><input type="text" placeholder="Enter your number" name="Number" required></td>
+</tr>
+<tr>
+<td><label><b>Quantity</b></label></td>
+<td><input type="Number" placeholder="Enter your quantity required" name="Quantity"></td>
+</tr>
+</table><br><br>
+<button>Send</button>
+</center>
+<script>
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+    }
+function hideSidebar(){
+ const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
+</script>
+
+</body>
+</html>
